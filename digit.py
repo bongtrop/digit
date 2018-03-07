@@ -4,8 +4,9 @@ import requests
 import optparse
 import zlib
 import string
+import os
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 __doc__ = \
 """%prog [options] GIT_URL
 Dig git information from .git directory on website."""
@@ -16,6 +17,7 @@ def is_sha1(h):
 def main():
     parser = optparse.OptionParser(usage=__doc__)
     parser.add_option('-o', '--object', help='Object\'s sha1', dest='object')
+    parser.add_option('-w', '--write', help='Write blob to file', dest='filename')
 
     (opts, args) = parser.parse_args()
 
@@ -77,10 +79,16 @@ def main():
 
                     print "%s\t%s\t%s" % (h.encode("hex"), mode, filename)
             else:
-                content = content[content.index('\x00')+1:]
-                print content.strip()
+                data = content[content.index('\x00')+1:]
+                data = data.strip()
+                print data
+                if content.startswith('blob') and opts.filename:
+                    if os.path.exists(opts.filename):
+                        if raw_input("\nFile already exist, wanna replace? (y/n):").lower() != 'y':
+                            exit()
+                    with open(opts.filename, 'wb') as f:
+                        f.write(data)
             print "=================================================="
-
 
 if __name__ == "__main__":
     main()
