@@ -33,14 +33,15 @@ python setup.py install
 just ```digit -h```. 
 
 ```bash
-Usage: digit [options] GIT_URL
-
+Usage: digit.py [options] GIT_URL
 Dig git information from .git directory on website.
 
 Options:
   -h, --help            show this help message and exit
   -o OBJECT, --object=OBJECT
                         Object's sha1
+  -w FILENAME, --write=FILENAME
+                        Write blob to file
 ```
 
 ## Contribution
