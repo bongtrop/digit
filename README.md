@@ -1,6 +1,8 @@
 # digit
 
-Dig git information from .git directory on website.
+Digit is the tool that help you to analyze git information from .git directory on website.
+
+I found the tool like [GitTools](https://github.com/internetwache/GitTools) to dump the source code from website with .git directory. GitTools have to dump objects from .git directory then use git command to analyze. But I only need the tool that can analyze .git directory without downloading and easy to dig into the git object.
 
 Github [https://github.com/bongtrop/digit](https://github.com/bongtrop/digit)
 
