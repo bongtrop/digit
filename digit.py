@@ -9,7 +9,7 @@ import os
 __version__ = '1.0.1'
 __doc__ = \
 """%prog [options] GIT_URL
-Dig git information from .git directory on website."""
+Digit is the tool that help you to analyze git information from .git directory on website."""
 
 def is_sha1(h):
     return len(h)==40 and all(c in string.hexdigits for c in h)
@@ -45,6 +45,10 @@ def main():
         else:
             print "=================================================="
             print r.content.strip()
+            if len(r.content.strip().split(" ")) == 2:
+                r = requests.get(url + "/" + r.content.strip().split(" ")[1])
+                print "\t|"
+                print "\t--> " + r.content.strip()
             print "=================================================="
         print
 
