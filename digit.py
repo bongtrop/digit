@@ -25,6 +25,9 @@ def main():
         parser.error('URL not given')
 
     url = args[0]
+    url = url.rstrip("/")
+    if not url.endswith(".git"):
+        url += "/.git"
 
     if not opts.object:
         print "====================== digit by Bongtrop ======================"
