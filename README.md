@@ -18,6 +18,8 @@ It's simple like the other python project.
 ### pip 
 
 ```bash
+pip install digit
+# or
 pip install git+https://github.com/bongtrop/digit.git
 ```
 
