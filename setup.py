@@ -26,7 +26,7 @@ setup(name=digit.__name__,
       keywords=['git', 'tool', 'hack'],
       classifiers=[
           'Development Status :: 3 - Alpha',
-          'Intended Audience :: Pentester',
+          'Intended Audience :: Other Audience',
           'License :: OSI Approved :: MIT License',
           'Topic :: Utilities',
           'Programming Language :: Python :: 2',
