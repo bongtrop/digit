@@ -12,9 +12,9 @@ setup(name=digit.__name__,
 
       url='https://github.com/bongtrop/digit',
       description='Dig git information from .git',
-      long_description=digit.__doc__,
-      scripts=['digit.py'],
-      py_modules=['digit'],
+      long_description=open("README.md").read(),
+      scripts=['digit/digit.py'],
+      py_modules=['digit.digit'],
       install_requires=[
        'requests'
       ],
@@ -22,5 +22,12 @@ setup(name=digit.__name__,
         [console_scripts]
         digit=digit:main
       """,
-      keywords=''
+      keywords=['git', 'tool', 'hack'],
+      classifiers=[
+          'Development Status :: 3 - Alpha',
+          'Intended Audience :: Pentester',
+          'License :: OSI Approved :: MIT License',
+          'Topic :: Utilities',
+          'Programming Language :: Python :: 2',
+          'Programming Language :: Python :: 2.7']
      )
