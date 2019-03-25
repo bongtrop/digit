@@ -9,7 +9,7 @@ import os
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-__version__ = '1.1.0'
+__version__ = '1.1.1'
 __doc__ = \
 """%prog [options] GIT_URL
 Digit is the tool that help you to analyze git information from .git directory on website."""
