@@ -11,7 +11,7 @@ setup(name=digit.__name__,
       license='MIT',
 
       url='https://github.com/bongtrop/digit',
-      download_url='https://github.com/bongtrop/digit/archive/v1.0.1.tar.gz',
+      download_url='https://github.com/bongtrop/digit/archive/v1.1.0.tar.gz',
       description='Dig git information from .git',
       long_description=open("README.md").read(),
       scripts=['digit/digit.py'],
